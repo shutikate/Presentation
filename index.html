@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>SOLID</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/sky.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="./assets/title.png">
+				</section>
+				<section>
+					<img src="./assets/Robert_C._Martin.jpg">
+				</section>
+				<section>
+					<div class="flex">
+						<p class="letter">S</p>
+						<p class="fragment fade-up">Single responsibility</p>
+					</div>
+					<div class="flex">
+						<p class="letter">O</p>
+						<p class="fragment fade-up">Open/closed</p>
+					</div>
+					<div class="flex">
+						<p class="letter">L</p>
+						<p class="fragment fade-up">Liskov substitution</p>
+					</div>
+					<div class="flex">
+						<p class="letter">I</p>
+						<p class="fragment fade-up">Interface segregation</p>
+					</div>
+					<div class="flex">
+						<p class="letter">D</p>
+						<p class="fragment fade-up">Dependency inversion</p>
+					</div>
+				</section>
+				<section>
+					<p>A entity should have a single responsibility</p>
+					<div class="flex-1">
+						<img src="./assets/S-principle.webp" width="650px" height="500px">
+						<p class="fragment fade-up">This principle aims to separate behaviors so that if bugs arise as a result of your change, it won’t affect other unrelated behaviors.</p> 
+					</div>
+				</section>
+				<section>
+					<p class="title-color">Advantages:</p>
+					<p class="fragment fade-up">Improve code readability</p>
+					<p class="fragment fade-up">Make it easier to change the code</p>
+					<p class="fragment fade-up">Get rid of the GodObject antipattern</p>
+					<p class="fragment fade-up">Ensure that the class will encapsulate the solution of one task</p>
+				</section>
+				<section>
+					<p>Software entities should be open for extension, but closed for modification</p>
+					<div class="flex-1">
+						<img src="./assets/O-principle.webp" width="650px" height="450px">
+						<p class="fragment fade-up">This principle aims to extend a Class’s behavior without changing the existing behavior of that Class. This is to avoid causing bugs wherever the Class is being used.</p> 
+					</div>
+				</section>
+				<section>
+					<p class="title-color">Advantages:</p>
+					<p class="fragment fade-up">There is no need for regression, that is, to check that the code already written was not broken</p>
+					<p class="fragment fade-up">Minimizing risk of breaking the existing code base</p>
+				</section>
+				<section>
+					<p>Liskov Substitution Principle</p>
+					<div class="flex-1">
+						<img src="./assets/Barbara Liskov.jpg" width="550px" height="450px">
+						<p>Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.</p>
+					</div>
+				</section>
+				<section>
+					<p>Liskov Substitution Principle</p>
+					<div class="flex-1">
+						<img src="./assets/L-principle.webp" width="600px" height="450px">
+						<p class="fragment fade-up">Functions and entities that use the parent type should work exactly the same with child classes, while the logic should not break</p>
+					</div>
+				</section>
+				<section>
+					<p class="title-color">Advantages:</p>
+					<p class="fragment fade-up">Code that adheres to LSP is loosely dependent to each other and encourages code reusability</p>
+				</section>
+				<section>
+					<p>Clients should not be forced to rely on interfaces they don't use</p>
+					<div class="flex-1">
+						<img src="./assets/I-principle.webp" width="650px" height="400px">
+						<p class="fragment fade-up">This principle aims at splitting a set of actions into smaller sets so that a Class executes ONLY the set of actions it requires</p>
+					</div>
+				</section>
+				<section>
+					<p class="title-color">Advantages:</p>
+					<p class="fragment fade-up">Don't need to throw exceptions unnecessarily</p>
+					<p class="fragment fade-up">Ridding software entities of methods they don't use</p>
+					<p class="fragment fade-up">Getting more predictable work</p>
+					<p class="fragment fade-up">Code becomes less coupled</p>
+				</section>
+				<section>
+					<p>High-level modules should not depend on low-level modules. Both should depend on the abstraction</p>
+					<p>Abstractions should not depend on details. Details should depend on abstractions</p>
+					<div class="flex-1">
+						<img src="./assets/D-principle.webp" width="550px" height="350px">
+						<p class="fragment fade-up">This principle aims at reducing the dependency of a high-level Class on the low-level Class by introducing an interface</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
